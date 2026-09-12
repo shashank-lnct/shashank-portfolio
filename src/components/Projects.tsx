@@ -1,7 +1,42 @@
 import { useReveal } from '../hooks/useReveal'
 import { projects } from '../data/portfolio'
-import { ArrowUpRight, Film, Wallet } from 'lucide-react'
+import { ArrowUpRight, Film, Wallet, Bot, Cpu } from 'lucide-react'
 import { GithubIcon } from './icons/BrandIcons'
+
+function AiVisual() {
+  return (
+    <div className="relative h-full w-full p-5 flex flex-col justify-between font-mono text-xs">
+      <div className="flex items-center justify-between">
+        <span className="text-muted flex items-center gap-1.5">
+          <Bot size={14} className="text-accent" /> n-max-core.py
+        </span>
+        <Cpu size={16} className="text-accent animate-pulse" />
+      </div>
+
+      <div className="rounded-md border border-border-soft bg-surface/80 p-3 space-y-2 shadow-inner">
+        <div className="flex items-center gap-2 text-accent">
+          <span className="text-[10px] px-1.5 py-0.5 rounded bg-accent/20">SYSTEM</span>
+          <span className="text-[11px]">N-Max Engine Active</span>
+        </div>
+        <div className="text-[11px] text-muted space-y-1">
+          <p className="flex items-center gap-1">
+            <span className="text-accent-2">&gt;</span> Initializing LLM Memory...
+          </p>
+          <p className="flex items-center gap-1 text-ink">
+            <span className="text-accent-2">&gt;</span> Task: Context-Aware Query Execution
+          </p>
+        </div>
+      </div>
+
+      <div className="flex justify-between items-center text-[10px] text-muted border-t border-border-soft pt-2">
+        <span className="flex items-center gap-1">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Status: Ready
+        </span>
+        <span className="font-mono">Latency: 12ms</span>
+      </div>
+    </div>
+  )
+}
 
 function MovieVisual() {
   const bars = [62, 84, 47, 71, 38, 90, 55]
@@ -74,7 +109,13 @@ function ProjectCard({ project, index }: { project: (typeof projects)[number]; i
       style={{ transitionDelay: `${index * 80}ms` }}
     >
       <div className="h-56 border-b border-border bg-surface-2 bg-grid">
-        {project.kind === 'ml' ? <MovieVisual /> : <ExpenseVisual />}
+        {project.kind === 'ai' ? (
+          <AiVisual />
+        ) : project.kind === 'ml' ? (
+          <MovieVisual />
+        ) : (
+          <ExpenseVisual />
+        )}
       </div>
       <div className="p-6 sm:p-7">
         <h3 className="font-display text-xl font-medium text-ink">{project.title}</h3>

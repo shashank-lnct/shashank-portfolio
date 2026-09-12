@@ -75,7 +75,7 @@ export const projects = [
     description:
       'Built an intelligent, context-aware AI virtual assistant designed to streamline daily workflows, execute local system actions, and handle natural language queries.',
     github: 'https://github.com/shashank-lnct/n-max',
-    kind: 'dashboard' as const,
+    kind: 'ai' as const,
   },
   {
     title: 'Movie Recommendation System',
@@ -91,7 +91,7 @@ export const projects = [
     description:
       'Designed and developed a responsive expense tracker with an interactive, user-friendly interface to log, categorize, and monitor daily expenses.',
     github: 'https://github.com/shashank-lnct/Expense-Tracker',
-    kind: 'dashboard' as const,
+    kind: 'expense' as const,
   },
 ]
 
