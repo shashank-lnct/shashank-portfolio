@@ -70,6 +70,14 @@ export const experience = [
 
 export const projects = [
   {
+    title: 'N-Max AI Assistant',
+    stack: ['Python', 'JavaScript', 'Electron.js', 'REST APIs'],
+    description:
+      'Built an intelligent, context-aware AI virtual assistant designed to streamline daily workflows, execute local system actions, and handle natural language queries.',
+    github: 'https://github.com/shashank-lnct/n-max',
+    kind: 'dashboard' as const,
+  },
+  {
     title: 'Movie Recommendation System',
     stack: ['Python', 'Jupyter Notebook', 'TMDB Dataset', 'Machine Learning'],
     description:
@@ -92,7 +100,7 @@ export const education = [
     school: 'LNCT University',
     program: 'B.Tech — Computer Science Engineering',
     period: 'Aug 2025 – June 2029',
-    metric: 'SGPA 7.78',
+    metric: 'SGPA 8.00',
   },
   {
     school: 'Oriental Foundation School, Bokaro',
